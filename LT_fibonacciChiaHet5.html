@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so dau tien trong day fibonacci chia het 5</title>
+</head>
+<body>
+<p> So dau tien trong day fibonacci chia het 5:</p>
+<p id="fibo"></p>
+<script>
+    let num=0;
+    let no=1;
+    let count=0;
+    while (count>=0){
+        num=num+no;
+        if(num%5===0){
+            document.getElementById("fibo").innerHTML =num;
+            break;
+        }
+        no=num+no;
+        if(no%5===0){
+            document.getElementById("fibo").innerHTML =no;
+            break;
+        }
+        count++;
+    }
+</script>
+</body>
+</html>

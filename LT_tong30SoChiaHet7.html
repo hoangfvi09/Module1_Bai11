@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tong 30 so tu nhien dau tien chia het 7</title>
+</head>
+<body>
+<p> Tong 30 so tu nhien dau tien chia het 7:</p>
+<p id="total"></p>
+<p id="num"></p>
+<script>
+    let count=0;
+    let num=0
+    let total=0;
+    while (count<30){
+        if (num%7===0){
+            total +=num;
+            document.getElementById("num").innerHTML +=num + " "
+            count++
+        }
+        num++;
+    }
+    document.getElementById("total").innerHTML=total;
+</script>
+</body>
+</html>
