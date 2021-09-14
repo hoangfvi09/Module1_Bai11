@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap Tinh lai suat</title>
+</head>
+<body>
+<p>Nhap lai suat: (%)</p>
+<input id="rate"> <br>
+<p>Nhap thoi han: (thang)</p>
+<input id="period"> <br>
+<p>Nhap so tien vay: (VND) </p>
+<input id="loan">
+<button onclick="loancal()">Tinh lai</button>
+<p id="result"> </p>
+<script>
+    function loancal() {
+        let rate = +document.getElementById('rate').value;
+        let period = +document.getElementById('period').value;
+        let loan1 = +document.getElementById('loan').value;
+        let loan2 = +document.getElementById('loan').value;
+        while (period > 0) {
+            loan2 += loan2 * rate/100;
+            period--
+        }
+        document.getElementById("result").innerHTML = "Lai la: " + (loan2 - loan1).toFixed(2) + " VND"
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap - ve tam giac vuong</title>
+</head>
+<body>
+<p id="tri1"></p> <br>
+<p id="tri2"></p> <br>
+<p id="tri3"></p> <br>
+<p id="tri4"></p>
+<script>
+    let count1=0;
+    let triangle1="";
+    while (count1<=5){
+        triangle1 += '<p>'
+        let count2=0;
+        while (count2<=count1){
+            triangle1+= '*'
+            count2++
+        }
+        count1++
+        triangle1+='<p/>'
+    }
+    document.getElementById("tri1").innerHTML=triangle1
+
+    //hinh2
+
+    let count21=0;
+    let triangle2="";
+    while (count21<=5){
+        triangle2 += '<p>'
+        let count22=5;
+        while (count22>=count21){
+            triangle2+= '*'
+            count22--
+        }
+        count21++
+        triangle2+='<p/>'
+    }
+    document.getElementById("tri2").innerHTML=triangle2
+    //hinh 3
+    let count31=5;
+    let triangle3="";
+    while (count31>=0){
+        triangle3 +="<p>"
+        let count32=count31;
+        while (count32>0){
+            triangle3 += "&ensp;"
+            count32--
+        }
+        count32=count31;
+        while ((5-count32)>0){
+            triangle3 += "*"
+            count32++
+        }
+        count31--
+        triangle3+='<p/>'
+    }
+
+    document.getElementById("tri3").innerHTML=triangle3
+    //hinh 4
+    let count41=5;
+    let triangle4="";
+    while (count41>=0){
+        triangle4 +="<p>"
+        let count42=count41;
+        while ((5-count42)>0){
+            triangle4 += "&ensp;"
+            count42++
+        }
+        count42=count41;
+        while (count42>0){
+            triangle4 += "*"
+            count42--
+        }
+        count41--
+        triangle4+='<p/>'
+    }
+
+    document.getElementById("tri4").innerHTML=triangle4
+
+
+
+</script>
+</body>
+</html>

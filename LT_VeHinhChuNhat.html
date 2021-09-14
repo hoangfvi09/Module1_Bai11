@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap Ve hinh chu nhat</title>
+</head>
+<body>
+<p id="rec"></p>
+<script>
+    let count1=1
+    let rec= '<p>'
+    while (count1<=40){
+        rec +="*"
+        count1++
+    }
+    rec +='</p>'
+    let count2= 1;
+    while (count2<=4) {
+        rec +='<p>*'
+        count1=1
+        while (count1 <=38) {
+            rec += "&ensp;"
+            count1++
+        }
+        rec += '*</p>'
+        count2++
+    }
+    count1=1
+    while (count1<=40){
+        rec +="*"
+        count1++
+    }
+
+
+    document.getElementById('rec').innerHTML=rec;
+</script>
+</body>
+</html>
